@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FormModal(props) {
+export default function EditModal (props) {
   const [input, setInput] = useState("");
 
   async function handleChange(e) {
@@ -38,7 +38,7 @@ export default function FormModal(props) {
         ></textarea>
       </div>
       <div className="mb-3">
-        <button className="btn btn-sm btn-primary mt-4">Add Note</button>
+        <button className="btn btn-sm btn-primary mt-4">Edit Note</button>
       </div>
     </form>
   );
