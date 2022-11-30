@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+.navbar a {
+    color: white;
+    font-size: 22px;
+    transition: all ease-in 0.3s;   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar i {
+    margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar a:hover {
+    color: rgb(161, 188, 228);
+}
+
+
+#add-note { /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 10%; /* Place the button at the bottom of the page */
+    right: 10%; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(57, 110, 253); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
