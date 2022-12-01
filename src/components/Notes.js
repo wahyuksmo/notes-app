@@ -90,7 +90,7 @@ export default function Notes() {
               <>
                 {notes.map((item) => (
                   <section key={item.id}>
-                    <div className="col-md-6 mb-4">
+                    <div className="col mb-4">
                       <div className="card">
                         <div className="card-body">
                           <p className="card-text">{item.text}</p>
