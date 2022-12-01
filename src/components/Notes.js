@@ -21,8 +21,8 @@ export default function Notes() {
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
 
-    if (notes.length === 0) {
-      setIsNotEmpty(true);
+    if (notes.length === 0 || notes.length === null) {
+      setIsNotEmpty(true); 
     } else {
       setIsNotEmpty(false);
     }
@@ -41,7 +41,7 @@ export default function Notes() {
     });
     setNote(notesYangKeFilter);
 
-    if (notesYangKeFilter.length === 0) {
+    if (notesYangKeFilter.length === 0 )  {
       setIsNotEmpty(true);
     }
   }
