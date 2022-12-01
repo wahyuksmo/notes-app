@@ -20,12 +20,6 @@ export default function Notes() {
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
-
-    if (notes.length === 0 || notes.length === null) {
-      setIsNotEmpty(true); 
-    } else {
-      setIsNotEmpty(false);
-    }
   }, [notes]);
 
   async function addNotes(note) {
