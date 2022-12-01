@@ -4,7 +4,7 @@ import FormModal from "./FormModal";
 import { useEffect, useState } from "react";
 
 export default function Notes() {
-  const initialState = JSON.parse(localStorage.getItem("notes"));
+  const initialState = JSON.parse(localStorage.getItem("notes")) || [];
 
   const [showAdd, setShowAdd] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
@@ -20,6 +20,12 @@ export default function Notes() {
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
+
+    if (notes.length === 0) {
+      setIsNotEmpty(true);
+    } else {
+      setIsNotEmpty(false);
+    }
   }, [notes]);
 
   async function addNotes(note) {
@@ -35,7 +41,7 @@ export default function Notes() {
     });
     setNote(notesYangKeFilter);
 
-    if (notesYangKeFilter.length === 0 )  {
+    if (notesYangKeFilter.length === 0) {
       setIsNotEmpty(true);
     }
   }
